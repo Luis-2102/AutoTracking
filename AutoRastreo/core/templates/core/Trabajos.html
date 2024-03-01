@@ -1,0 +1,44 @@
+{% extends 'core/home.html' %}
+{% block class %}style="background-color: black;"{% endblock %}
+{% block link3 %}active{% endblock %}
+{% block fond %}
+<div id="hero" class="route " style="background-color: black; height: 90px;">
+</div>
+{% endblock fond %}
+{% block content %}
+{% load static %}
+<section id="services" class="services-mf pt-5 route">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h3 class="title-a">
+            Servicios
+          </h3>
+          <p class="subtitle-a">
+            Ofrecemos servicios de calidad
+          </p>
+          <div class="line-mf"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {% for portfolio in portfolio %}
+      <div class="col-md-4">
+        <div class="service-box">
+          <div class="service-ico">
+            <span class="ico-circle"><i class="bi bi-{{portfolio.icon}}"></i></span>
+          </div>
+          <div class="service-content">
+            <h2 class="s-title">{{portfolio.nom}}</h2>
+            <p class="s-description text-center">
+              {{portfolio.detall}}
+            </p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock%}

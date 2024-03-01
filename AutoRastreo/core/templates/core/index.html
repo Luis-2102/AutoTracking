@@ -1,0 +1,140 @@
+{% extends 'core/home.html' %}
+{% block class %}class="fixed-top"{% endblock %}
+{% block link1 %}active{% endblock link1 %}
+{% load static %}
+{% block fond %}
+
+<div id="hero" class="hero route bg-image">
+    <div class="overlay-itro"></div>
+    <div class="hero-content display-table">
+        <div class="table-cell">
+            <div class="container">
+                <h1 class="hero-title mb-4">TRACKING AUTOSEGURO</h1>
+                <p class="hero-subtitle"><span class="typed" data-typed-items="
+                    {% for espe in espe %}
+                    {{espe.Espe}},
+                    {% endfor %}"></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock fond %}
+{% block content %}
+
+<div class="col-sm-12">
+    <div class="box-shadow-full_c">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="col-sm-6 col-md-7">
+                    <div style="position:relative ; width: 100%; height: 100%; padding-top: 65%; ">
+                        <img style="position: absolute; width: 90%; height: 100%; top: 0; left: 150px; border: none; padding: 0;margin: 0;"
+                            src="{% static 'core/img/Diseño.png' %}">
+                        </img>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="skill-mf">
+                    <p class="title-left title-a" style="color: black;"> Controla tus vehículos con la mejor tecnología
+                    </p>
+                    Descubre todas las características que hacen de Satrack el software de rastreo y control más
+                    completo para tu negocio.
+                </div>
+                <a href="{% url 'Trabajos' %}" class="boton a_ boton-verde" style="border-radius: 9px;">CONOCE MÁS</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="imagen-contactenos" style="margin: 3%;">
+    <div class="contenedor contenido-contacto">
+        <h3 class="title-a" style="color: black;">
+            Mantén Tu Vehículo Seguro
+        </h3>
+        <p>Su Auto Seguro, Siempre con Nosotros</p>
+        <a href="#" class="boton boton-verde" style="border-radius: 9px;">Rastrear mi Vehículo</a>
+    </div>
+</section>
+
+<section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+        <div class="portfolio-details-slider swiper" style="max-width: 700px; margin: 35px auto;">
+            <div class="title-box text-center">
+                <h3 class="title-a">
+                    RECURSOS
+                </h3>
+                <p class="subtitle-a">
+
+                </p>
+                <div class="line-mf"></div>
+            </div>
+            <div class="swiper-wrapper align-items-center">
+                {% if about.imga1 %}
+                <div class="swiper-slide ">
+                    <img src="{{ about.imga1.url }}" class="img-fluid" alt="">
+                </div>
+                {% endif %}
+                {% if about.imga2 %}
+                <div class="swiper-slide">
+                    <img src="{{ about.imga2.url }}" class="img-fluid" alt="">
+                </div>
+                {% endif %}
+                {% if about.imga3 %}
+                <div class="swiper-slide">
+                    <img src="{{ about.imga3.url }}" class="img-fluid" alt="">
+                </div>
+                {% endif %}
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="box-shadow-full">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="skill-mf">
+                                <p class="title-left title-a" style="color: black;"> <br> <br> </p>
+                                <form class="form_" method="post" action="https://wa.me/message/UM4A6DI3MOAKD1">
+                                    {% if messages %}
+                                    {% for mensaje in messages %}.
+                                    <div class="msg">
+                                        <div class="alert alert-{{mensaje.tags}} alert-dismissible fade show mar"
+                                            role="alert">
+                                            <p class="centrar-texto pad">{{mensaje}}</p>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    {% endif %}
+                                    {% csrf_token %}
+                                    <fieldset>
+                                        <legend style="color: black;">Información Personal</legend>
+                                        <input class="input_" type="text" placeholder="Nombre" name="Nombre" required>
+                                        <input class="input_" type="text" placeholder="Apellido" name="Apellido"
+                                            required>
+                                        <input class="input_" type="email" placeholder="Email" name="email" required>
+                                        <input class="input_" type="text" placeholder="Teléfono" name="telefono"
+                                            required>
+                                        <textarea class="textarea_" name="mensaje" placeholder="Mensaje"
+                                            required></textarea>
+
+                                    </fieldset>
+                                    <input type="submit" class="boton boton-verde bi bi-send" style="border-radius: 9px;"
+                                        value="Enviar">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

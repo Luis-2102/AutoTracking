@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title style="position: right;">Tracking | Tu Auto Seguro</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  {% load static %}
+  <link href="{% static 'core/img/logo_tracking.png' %}" rel="icon">
+  <link href="{% static 'core/img/logo_tracking.png' %}" rel="apple-touch-icon">
+  <link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'core/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'core/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'core/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+  <link href="{% static 'core/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="container-boton_">
+    <a href="https://wa.me/message/UM4A6DI3MOAKD1" target="_blank">
+      <img class="boton_" src="{% static 'core/img/icono.png' %}" alt="">
+    </a>
+  </div>
+
+  <header id="header" class="fixed-top" style="background-color: aliceblue;">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo img-fluid"><a href="{% url 'home' %}">
+        <img src="{% static 'core/img/LOGOTIPO_TRACKING_AUTO_SEGURO.png' %} " alt="Logo"></a></h1>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto {% block link1 %}{% endblock  %}" href="{% url 'home' %}">Inicio</a></li>
+          <li><a class="nav-link scrollto {% block link2 %}{% endblock  %}" href="{% url 'Servicios' %}">Nosotros</a>
+          </li>
+          <li><a class="nav-link scrollto {% block link5 %}{% endblock  %}" href="{% url 'Contacto' %}">Contáctanos</a>
+          </li>
+          <li><a class="nav-link scrollto {% block link3 %}{% endblock  %}" href="{% url 'Trabajos' %}">Servicios</a>
+          </li>
+          <li><a class="boton-azul" style="background-color: #0062d3; color: aliceblue; " href="#">Rastrear mi
+              Vehículo</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+  {% block fond %}{% endblock fond %}
+  <main id="main">
+    {% block content %}{% endblock content %}
+  </main>
+
+  <!--Footer-->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="box-shadow-full_" style="background-color: #0062d3;">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-5 ">
+                        <div class="about-img d-flex align-items-center ">
+                          <a href="{% url 'home' %}">
+                            <img src="{% static 'core/img/LOGOTIPO_TRACKING_AUTO_SEGURO.png' %}" alt="Logo"
+                              class="img-fluid logo-small " style="max-width: 220px;">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="skill-mf">
+                      <p class="title-left_" style="color: rgb(255, 255, 255); font-size: 25px; text-align: start; ">
+                        visita nuestras
+                        redes sociales </p>
+                      <div class="about-mf  socials">
+                        <ul>
+                          <li><a href="https://www.facebook.com/profile.php?id=61556608329461"><span class="ico-circle"
+                                style="color: black; 
+                            transition: all 500ms ease;"><i class="bi bi-facebook"></i></span></a></li>
+                          <li><a href="https://www.instagram.com/trackingautoseguro?igsh=MTQxYjhuMzFoY3U3Yg=="><span
+                                class="ico-circle" style="color: black;
+                            transition: all 500ms ease;"><i class="bi bi-instagram"></i></span></a></li>
+                          <li><a href="https://wa.me/message/UM4A6DI3MOAKD1"><span class="ico-circle" style="color: black;
+                            transition: all 500ms ease;"><i class="bi bi-whatsapp"></i></span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="about-me pt-4 pt-md-0">
+                      <div class="col-md-6">
+
+                      </div>
+                      <p class="more-info">
+                      <ul class="list-ico">
+                        <li><span class="bi bi-geo-alt" style="color: aliceblue;"></span>QUITO: AV.MARIANA DE JESÚS Y
+                          JORGE JUAN</li>
+                        <li><span class="bi bi-phone" style="color: aliceblue;"></span>02 3210 387 / 098 610 9849 </li>
+                        <li><span class="bi bi-envelope" style="color: aliceblue;"></span>trackingauto@gmail.com</li>
+                      </ul>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+
+  <footer style="background-color: rgb(47, 47, 47);">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="copyright-box">
+            <p class="copyright">&copy; Copyright <a style="color: aliceblue;" href="https://w.app/geYhIf" target="_blank"><strong>Luis Sebastián Alomoto</strong></a>. All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'core/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'core/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'core/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'core/vendor/typed.js/typed.min.js' %}"></script>
+  <script src="{% static 'core/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'core/js/main.js' %}"></script>
+
+</body>
+
+</html>
